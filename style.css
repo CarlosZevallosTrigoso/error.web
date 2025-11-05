@@ -1,6 +1,14 @@
-/* Reseteo básico y fuentes */
+/*
+ * Reseteo básico y fuentes
+ * CAMBIO: Se actualizó la fuente principal a "Google Sans Code"
+ */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400; /* 400 es el peso "normal" */
+    font-style: normal;
+    
+    /* --- Estilos anteriores --- */
     line-height: 1.6;
     margin: 0;
     padding: 20px 0;
@@ -12,8 +20,8 @@ body {
 .wrapper {
     max-width: 40%;
     min-width: 350px; 
-    margin: 0 auto;
-    background-color: #fff;
+    margin: 0 auto; /* Centra el wrapper */
+    background-color: #fff; /* Fondo blanco para el contenido */
     padding: 25px;
     border: 1px solid #ddd;
     box-shadow: 0 0 15px rgba(0,0,0,0.05);
@@ -47,20 +55,17 @@ main {
 }
 
 /* --- Pie de Página --- */
-/*
- * CAMBIO: Estilos actualizados para el footer
- */
 footer {
     border-top: 1px solid #eee;
     padding-top: 15px;
     margin-top: 40px;
     
-    color: #777; /* Color de texto más suave */
+    color: #777;
     text-align: center; /* Centra el contenido */
     font-size: 0.85em; /* Puntaje menor */
 }
 
 /* Estilo para los separadores */
 footer .separator {
-    margin: 0 10px; /* Espacio a los lados del | */
+    margin: 0 10px;
 }
