@@ -2,16 +2,29 @@
  * Reseteo básico y fuentes
  * CAMBIO: Se actualizó la fuente principal a "Google Sans Code"
  */
+
+/* NUEVO: Asegurar altura completa */
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Google Sans Code", monospace;
     font-optical-sizing: auto;
     font-weight: 400; /* 400 es el peso "normal" */
     font-style: normal;
     
-    /* --- Estilos anteriores --- */
     line-height: 1.6;
     margin: 0;
-    padding: 20px 0;
+    
+    /* --- INICIO CAMBIOS DE LAYOUT --- */
+    padding: 0; /* Se quita el padding */
+    min-height: 100%; /* El body ocupa al menos toda la pantalla */
+    box-sizing: border-box;
+    display: flex; /* Se usa flexbox para el layout */
+    flex-direction: column; /* Dirección vertical */
+    /* --- FIN CAMBIOS DE LAYOUT --- */
+    
     background-color: #f4f4f4;
     color: #333;
 }
@@ -20,7 +33,14 @@ body {
 .wrapper {
     max-width: 40%;
     min-width: 350px; 
-    margin: 0 auto; /* Centra el wrapper */
+    
+    /* --- INICIO CAMBIOS DE LAYOUT --- */
+    margin: 20px auto; /* Centra y añade el espacio superior/inferior */
+    display: flex; /* Es un contenedor flex interno */
+    flex-direction: column; /* Dirección vertical */
+    flex-grow: 1; /* El wrapper crece para llenar el body */
+    /* --- FIN CAMBIOS DE LAYOUT --- */
+
     background-color: #fff; /* Fondo blanco para el contenido */
     padding: 25px;
     border: 1px solid #ddd;
@@ -43,6 +63,7 @@ header {
 /* --- Contenido Principal --- */
 main {
     padding: 0;
+    flex-grow: 1; /* CAMBIO: El main crece para empujar el footer */
 }
 
 .content-block p, .download-info p, .projects {
@@ -61,11 +82,6 @@ footer {
     margin-top: 40px;
     
     color: #777;
-    text-align: left; /* CAMBIO: Alineado a la izquierda como en la imagen */
-    font-size: 8px;   /* CAMBIO: Tamaño de fuente solicitado */
+    text-align: left; /* Alineado a la izquierda */
+    font-size: 10px;  /* CAMBIO: Tamaño de fuente 10px */
 }
-
-/* Estilo para los separadores (ELIMINADO) */
-/* Se eliminó la regla "footer .separator" */
-
-/* Se eliminó el "}" extra que había aquí */
