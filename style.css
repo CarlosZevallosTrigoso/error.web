@@ -15,7 +15,7 @@ body {
     font-style: normal;
     font-size: 12px;
     
-    line-height: 1.2;
+    line-height: 1.4;
     margin: 0;
     
     /* --- INICIO CAMBIOS DE LAYOUT --- */
@@ -86,4 +86,5 @@ footer {
     text-align: left; /* Alineado a la izquierda */
     font-size: 10px;  /* CAMBIO: Tamaño de fuente 10px */
 }
+
 
