@@ -13,9 +13,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 400; /* 400 es el peso "normal" */
     font-style: normal;
-    font-size: 12px;
     
-    line-height: 1.4;
+    line-height: 1.4; /* CAMBIO: Ajustado a 1.4 */
     margin: 0;
     
     /* --- INICIO CAMBIOS DE LAYOUT --- */
@@ -35,12 +34,14 @@ body {
     max-width: 40%;
     min-width: 350px; 
     
-    /* --- INICIO CAMBIOS DE LAYOUT --- */
-    margin: 20px auto; /* Centra y añade el espacio superior/inferior */
+    /* --- INICIO CAMBIO DE ALINEACIÓN --- */
+    /* Se cambió '20px auto' por '20px' para alinear a la izquierda */
+    margin: 20px; 
+    /* --- FIN CAMBIO DE ALINEACIÓN --- */
+    
     display: flex; /* Es un contenedor flex interno */
     flex-direction: column; /* Dirección vertical */
     flex-grow: 1; /* El wrapper crece para llenar el body */
-    /* --- FIN CAMBIOS DE LAYOUT --- */
 
     background-color: #fff; /* Fondo blanco para el contenido */
     padding: 25px;
@@ -64,7 +65,7 @@ header {
 /* --- Contenido Principal --- */
 main {
     padding: 0;
-    flex-grow: 1; /* CAMBIO: El main crece para empujar el footer */
+    flex-grow: 1; /* El main crece para empujar el footer */
 }
 
 .content-block p, .download-info p, .projects {
@@ -84,7 +85,5 @@ footer {
     
     color: #777;
     text-align: left; /* Alineado a la izquierda */
-    font-size: 10px;  /* CAMBIO: Tamaño de fuente 10px */
+    font-size: 12px;  /* CAMBIO: Tamaño de fuente 12px */
 }
-
-
