@@ -3,45 +3,43 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background-color: #fff;
+    padding: 20px 0; /* Espacio superior/inferior en el body */
+    background-color: #f4f4f4; /* Un fondo para ver el wrapper */
     color: #333;
 }
 
-/* Contenedor principal para centrar el contenido */
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 10px;
+/* * NUEVO: Contenedor Wrapper 
+ * Este div envuelve toda la página y la limita al 30% del ancho.
+ */
+.wrapper {
+    max-width: 30%;
+    min-width: 350px; /* Evita que sea demasiado estrecho en pantallas grandes */
+    margin: 0 auto; /* Centra el wrapper horizontalmente */
+    background-color: #fff; /* Fondo blanco para el contenido */
+    padding: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
 /* --- Encabezado --- */
 header {
-    width: 100%;
-    padding: 10px 5%;
-    box-sizing: border-box;
     border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Barra superior (Enlace al inicio / Otros enlaces ... [fecha]) */
-.top-bar {
-    display: flex;
-    justify-content: space-between; /* <-- ESTA ES LA REGLA CLAVE para la alineación derecha */
-    align-items: center;
-    font-size: 0.9em;
-    color: #555;
+.top-nav {
+    margin-bottom: 10px;
 }
 
 .top-nav a {
     text-decoration: none;
     color: #007bff;
     margin-right: 15px;
+    font-size: 0.9em;
 }
 
-/* Barra de título (> 3rror.xyz ...) */
 .title-bar {
-    margin-top: 10px;
     font-size: 1.1em;
     font-weight: bold;
     color: #444;
@@ -49,29 +47,27 @@ header {
 
 /* --- Contenido Principal --- */
 main {
-    padding-top: 20px;
+    padding: 0;
 }
-/* ... (resto de estilos sin cambios) ... */
+
 .content-block p, .download-info p, .projects {
      margin-bottom: 20px;
 }
 
+.projects h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
 
 /* --- Pie de Página --- */
 footer {
-    width: 100%;
-    background-color: #fff;
     border-top: 1px solid #eee;
-    padding: 20px 5%;
+    padding-top: 15px;
     margin-top: 40px;
-    box-sizing: border-box;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between; /* <-- ESTA ES LA REGLA CLAVE para la alineación derecha */
-    align-items: center;
     font-size: 0.9em;
     color: #555;
-    width: 100%;
+}
+
+footer p {
+    margin: 8px 0; /* Espacio entre los elementos del footer */
 }
