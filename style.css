@@ -54,18 +54,18 @@ main {
     margin-bottom: 10px;
 }
 
-/* --- Pie de Página --- */
+/* --- Pie de Página (ACTUALIZADO) --- */
 footer {
     border-top: 1px solid #eee;
     padding-top: 15px;
     margin-top: 40px;
     
     color: #777;
-    text-align: center; /* Centra el contenido */
-    font-size: 0.85em; /* Puntaje menor */
+    text-align: left; /* CAMBIO: Alineado a la izquierda como en la imagen */
+    font-size: 8px;   /* CAMBIO: Tamaño de fuente solicitado */
 }
 
-/* Estilo para los separadores */
-footer .separator {
-    margin: 0 10px;
-}
+/* Estilo para los separadores (ELIMINADO) */
+/* Se eliminó la regla "footer .separator" */
+
+/* Se eliminó el "}" extra que había aquí */
