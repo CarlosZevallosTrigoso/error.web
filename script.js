@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /**
- * Función 1: Inicia un reloj en vivo
+ * Función 1: Inicia un reloj en vivo (Sin cambios)
  * Muestra fecha y hora actualizados (incluyendo milisegundos).
  */
 function startLiveClock() {
@@ -44,7 +44,7 @@ function startLiveClock() {
 
 
 /**
- * Función 2: Obtiene la IP pública y la ubicación (sin cambios)
+ * Función 2: Obtiene la IP pública y la ubicación (ACTUALIZADA)
  */
 function loadIpInfo() {
     const ipElement = document.getElementById("ip-info");
@@ -67,7 +67,10 @@ function loadIpInfo() {
             ipElement.textContent = `Tu IP Pública: ${ip} (desde ${city}, ${country})`;
         })
         .catch(error => {
+            // --- INICIO DEL CAMBIO ---
             console.error('Error al obtener la IP:', error);
+            // Muestra el error como en tu captura de pantalla
             ipElement.textContent = 'Tu IP Pública: (No se pudo obtener)';
+            // --- FIN DEL CAMBIO ---
         });
 }
