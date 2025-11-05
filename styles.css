@@ -3,19 +3,20 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px 0; /* Espacio superior/inferior en el body */
-    background-color: #f4f4f4; /* Un fondo para ver el wrapper */
+    padding: 20px 0;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* * NUEVO: Contenedor Wrapper 
- * Este div envuelve toda la página y la limita al 30% del ancho.
+/*
+ * Contenedor Wrapper
+ * CAMBIO: Ancho máximo ajustado a 40%
  */
 .wrapper {
-    max-width: 30%;
-    min-width: 350px; /* Evita que sea demasiado estrecho en pantallas grandes */
-    margin: 0 auto; /* Centra el wrapper horizontalmente */
-    background-color: #fff; /* Fondo blanco para el contenido */
+    max-width: 40%;
+    min-width: 350px; 
+    margin: 0 auto;
+    background-color: #fff;
     padding: 25px;
     border: 1px solid #ddd;
     box-shadow: 0 0 15px rgba(0,0,0,0.05);
@@ -28,16 +29,7 @@ header {
     margin-bottom: 20px;
 }
 
-.top-nav {
-    margin-bottom: 10px;
-}
-
-.top-nav a {
-    text-decoration: none;
-    color: #007bff;
-    margin-right: 15px;
-    font-size: 0.9em;
-}
+/* (Se eliminó .top-nav) */
 
 .title-bar {
     font-size: 1.1em;
@@ -68,6 +60,9 @@ footer {
     color: #555;
 }
 
+/*
+ * CAMBIO: Margen reducido para juntar las líneas
+ */
 footer p {
-    margin: 8px 0; /* Espacio entre los elementos del footer */
+    margin: 4px 0; /* Espacio vertical pequeño entre líneas */
 }
