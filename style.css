@@ -14,16 +14,20 @@ body {
     font-weight: 400; /* 400 es el peso "normal" */
     font-style: normal;
     
-    line-height: 1.4; /* CAMBIO: Ajustado a 1.4 */
+    /* --- INICIO DE CAMBIOS --- */
+    line-height: 1.4; /* Altura de línea para el body */
+    font-size: 12px;  /* Tamaño de fuente para el body */
+    /* --- FIN DE CAMBIOS --- */
+
     margin: 0;
     
-    /* --- INICIO CAMBIOS DE LAYOUT --- */
-    padding: 0; /* Se quita el padding */
-    min-height: 100%; /* El body ocupa al menos toda la pantalla */
+    /* --- Layout Flex --- */
+    padding: 0; 
+    min-height: 100%; 
     box-sizing: border-box;
-    display: flex; /* Se usa flexbox para el layout */
-    flex-direction: column; /* Dirección vertical */
-    /* --- FIN CAMBIOS DE LAYOUT --- */
+    display: flex; 
+    flex-direction: column; 
+    /* --- Fin Layout Flex --- */
     
     background-color: #f4f4f4;
     color: #333;
@@ -34,10 +38,8 @@ body {
     max-width: 40%;
     min-width: 350px; 
     
-    /* --- INICIO CAMBIO DE ALINEACIÓN --- */
-    /* Se cambió '20px auto' por '20px' para alinear a la izquierda */
+    /* Alineado a la izquierda */
     margin: 20px; 
-    /* --- FIN CAMBIO DE ALINEACIÓN --- */
     
     display: flex; /* Es un contenedor flex interno */
     flex-direction: column; /* Dirección vertical */
@@ -85,5 +87,7 @@ footer {
     
     color: #777;
     text-align: left; /* Alineado a la izquierda */
-    font-size: 12px;  /* CAMBIO: Tamaño de fuente 12px */
+    /* El font-size: 12px; se hereda ahora del body, 
+       así que la regla explícita se elimina de aquí.
+    */
 }
