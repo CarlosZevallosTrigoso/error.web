@@ -74,3 +74,50 @@ function loadIpInfo() {
             // --- FIN DEL CAMBIO ---
         });
 }
+// Espera a que todo el contenido del HTML se cargue
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Iniciar el reloj en vivo
+    startLiveClock();
+    
+    // 2. Cargar la información de la IP
+    loadIpInfo();
+
+    // 3. --- INICIO DEL CAMBIO ---
+    // Configurar el hover para el fondo
+    setupBackgroundHover();
+    // --- FIN DEL CAMBIO ---
+
+});
+
+/*
+... (Aquí van las funciones startLiveClock() y loadIpInfo() existentes) ...
+*/
+
+
+/**
+ * Función 3: NUEVA
+ * Configura el evento hover en "Enlace 1" para cambiar el fondo del body.
+ */
+function setupBackgroundHover() {
+    // Seleccionamos el enlace por el ID que pusimos en el HTML
+    const enlace = document.getElementById("enlace-fondo-1");
+    
+    // Seleccionamos el body
+    const body = document.body;
+
+    // Asegurarnos de que el enlace existe antes de añadir eventos
+    if (enlace) {
+        
+        // Evento cuando el cursor ENTRA en el enlace
+        enlace.addEventListener("mouseenter", function() {
+            body.classList.add("fondo-activo");
+        });
+
+        // Evento cuando el cursor SALE del enlace
+        enlace.addEventListener("mouseleave", function() {
+            body.classList.remove("fondo-activo");
+        });
+    }
+}
+
