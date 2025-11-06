@@ -33,6 +33,28 @@ body {
     color: #333;
 }
 
+/* --- INICIO DEL CAMBIO: Fondo dinámico --- */
+
+body {
+    /* ... (Estilos existentes) ... */
+    
+    /* Añadimos una transición suave para el cambio de fondo */
+    transition: background 0.4s ease-in-out; 
+}
+
+/* * Esta es la clase que JS agregará al body.
+ * Define la imagen 'fondo_a.png' que mencionaste.
+*/
+body.fondo-activo {
+    background-image: url('fondo_a.png');
+    background-size: cover;          /* Cubre toda la pantalla */
+    background-position: center;     /* Centra la imagen */
+    background-repeat: no-repeat;    /* No repitas la imagen */
+    background-attachment: fixed;    /* La imagen no se mueve con el scroll */
+}
+
+/* --- FIN DEL CAMBIO --- */
+
 /* Contenedor Wrapper */
 .wrapper {
     max-width: 40%;
@@ -91,3 +113,4 @@ footer {
        así que la regla explícita se elimina de aquí.
     */
 }
+
