@@ -14,10 +14,8 @@ body {
     font-weight: 400; /* 400 es el peso "normal" */
     font-style: normal;
     
-    /* --- INICIO DE CAMBIOS --- */
     line-height: 1.4; /* Altura de línea para el body */
     font-size: 12px;  /* Tamaño de fuente para el body */
-    /* --- FIN DE CAMBIOS --- */
 
     margin: 0;
     
@@ -29,28 +27,44 @@ body {
     flex-direction: column; 
     /* --- Fin Layout Flex --- */
     
-    background-color: #f4f4f4;
+    background-color: #000; /* CAMBIO: Fondo negro */
     color: #333;
+    /* CAMBIO: La transición de fondo se elimina de aquí */
 }
 
-/* --- INICIO DEL CAMBIO: Fondo dinámico --- */
+/* --- INICIO DEL CAMBIO: Fondo dinámico (Lógica de Fade In) --- */
 
-body {
-    /* ... (Estilos existentes) ... */
-    
-    /* Añadimos una transición suave para el cambio de fondo */
-    transition: background 0.4s ease-in-out; 
-}
-
-/* * Esta es la clase que JS agregará al body.
- * Define la imagen 'fondo_a.png' que mencionaste.
+/* * Usamos un pseudo-elemento 'before' para el fondo.
+ * Estará fijo, detrás de todo (z-index: -1) e invisible (opacity: 0).
 */
-body.fondo-activo {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
     background-image: url('fondo_a.png');
-    background-size: cover;          /* Cubre toda la pantalla */
-    background-position: center;     /* Centra la imagen */
-    background-repeat: no-repeat;    /* No repitas la imagen */
-    background-attachment: fixed;    /* La imagen no se mueve con el scroll */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.4s ease-in-out; /* Transición de fade-in/out */
+    z-index: -1; 
+}
+
+/* * Cuando JS añada la clase 'fondo-activo' al body (al hacer hover),
+ * haremos que el fondo (el pseudo-elemento) aparezca.
+*/
+body.fondo-activo::before {
+    opacity: 1;
+}
+
+/* * Hacemos que el 'span' que envuelve los enlaces 
+ * muestre un cursor de puntero.
+*/
+#enlace-fondo-1 {
+    cursor: pointer;
 }
 
 /* --- FIN DEL CAMBIO --- */
@@ -113,4 +127,3 @@ footer {
        así que la regla explícita se elimina de aquí.
     */
 }
-
