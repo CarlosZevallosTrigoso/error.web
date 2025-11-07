@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // 2. Cargar la información de la IP
     loadIpInfo();
 
+    // 3. --- INICIO DEL CAMBIO ---
+    // Configurar el hover para el fondo
+    setupBackgroundHover();
+    // --- FIN DEL CAMBIO ---
+
 });
 
 /**
@@ -74,22 +79,6 @@ function loadIpInfo() {
             // --- FIN DEL CAMBIO ---
         });
 }
-// Espera a que todo el contenido del HTML se cargue
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. Iniciar el reloj en vivo
-    startLiveClock();
-    
-    // 2. Cargar la información de la IP
-    loadIpInfo();
-
-    // 3. --- INICIO DEL CAMBIO ---
-    // Configurar el hover para el fondo
-    setupBackgroundHover();
-    // --- FIN DEL CAMBIO ---
-
-});
-
 /*
 ... (Aquí van las funciones startLiveClock() y loadIpInfo() existentes) ...
 */
@@ -120,4 +109,3 @@ function setupBackgroundHover() {
         });
     }
 }
-
